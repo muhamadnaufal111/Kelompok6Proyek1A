@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service AC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: hsl(219, 28%, 25%);
+    }
+    .card-body {
+      text-align: justify;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .list-group-item {
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .card-img-top {
+      box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-brand {
+      margin-right: 20px;
+    }
+    .sticky-card {
+      position: fixed;
+      bottom: 250px;
+      left: 75%;
+      transform: translateX(-50%);
+      width: 30rem;
+      background-color: #03aac0;
+    }
+    .rating {
+      color: gold;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+    .card-title-1 {
+      text-align: center;
+    }
+    .highlight {
+      background-color: yellow;
+    }
+    .list-group-item h5 {
+      margin-bottom: 0;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  </style>
+
+<script type="text/javascript">
+  // Check if the user is logged in
+  var isLoggedIn = false; // Set this variable to true if the user is logged in
+
+  // Function to show the alert only if the user is not logged in
+  function showAlert() {
+    if (!isLoggedIn) {
+      window.alert("Anda Harus Register Terlebih Dahulu Bila Ingin Memesan Jasa Service Kami, TerimaKasih ;)");
+    }
+  }
+
+  // Call the showAlert function when the page loads
+  window.onload = showAlert;
+</script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <img src="logo.png" alt="Bootstrap" width="60" height="60" class="d-inline-block align-text-top">
+      <span class="ms-2">Teon Service AC</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <form class="d-flex" role="search" onsubmit="event.preventDefault(); searchContent();">
+      <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="register.html" >Register</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card mb-5">
+        <div class="card-header">
+          <h4 class="card-title-1">Service AC Terbaik</h4>
+          <div class="rating">
+            &#9733; &#9733; &#9733; &#9733; &#9734; 4,0 (100 ulasan)
+          </div>
+        </div>
+        <img src="gambar_card.jpeg" class="card-img-top rounded" alt="...">
+        <div class="card-body">
+          <p class="card-text">Layanan jasa pembersihan AC secara umum, isi ulang freon untuk R-22 dan R-410, perbaikan kebocoran freon, AC berisik, dan masalah lainnya pada AC. Layanan ini tersedia untuk semua jenis dan merek unit AC. Tersedia garansi hingga 30 hari setelah waktu pengerjaan.</p>
+          <a href="Jasa cuci ac.html" class="btn btn-primary">Pesan Sekarang</a>
+          <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item">
+              <h5 class="card-title">Penyedia jasa terverifikasi</h5>
+              Hanya penyedia jasa yang lolos verifikasi, terpercaya, dan berkualitas yang bisa melayani Anda.
+            </li>
+            <li class="list-group-item">
+              <h5 class="card-title">Konfirmasi pemesanan cepat</h5>
+              Waktu Anda sangat berharga. Itu sebabnya konfirmasi ini hanya butuh beberapa saat setelah permintaan selesai dibuat.
+            </li>
+            <li class="list-group-item">
+              <h5 class="card-title">Jaminan garansi</h5>
+              Garansi layanan hingga 30 hari setelah kunjungan.
+            </li>
+            <li class="list-group-item">
+              <h5 class="card-title">Bantuan pelanggan</h5>
+              Tim CS kami siap membantu Anda terkait pemesanan layanan di Teon service AC.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card mb-5">
+        <div class="card-header">
+          <h4 class="card-title-1">Service AC Price List</h4>
+        </div>
+        <div class="card">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci AC 1/3 PK</span>
+              <span>75.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci AC 1/2 PK</span>
+              <span>75.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci AC 1 PK</span>
+              <span>75.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci AC 2 PK</span>
+              <span>100.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+             <span>Cuci AC Interver 1/3 PK</span>
+             <span>100.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci AC Interver 1/2 PK</span>
+              <span>100.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci AC Interver 1 PK</span>
+              <span>120.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+               <span>Cuci AC Interver 2 PK</span>
+               <span>150.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R22 1/3 PK</span>
+              <span>50.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R22 1/2 PK</span>
+              <span>65.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R22 1 PK</span>
+              <span>60.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R22 2 PK</span>
+              <span>150.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R32/410 1/3 PK</span>
+              <span>50.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R32/410 1/2 PK</span>
+              <span>65.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R32/410 1 PK</span>
+              <span>80.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Isi Freon R32/410 2 PK</span>
+              <span>150.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang AC 1/3 PK</span>
+              <span>200.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang AC 1/2 PK</span>
+              <span>200.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang AC 1 PK</span>
+              <span>250.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang AC 2 PK</span>
+              <span>275.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Bongkar AC 1/3 PK</span>
+              <span>175.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Bongkar AC 1/2 PK</span>
+              <span>200.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Bongkar AC 1 PK</span>
+              <span>200.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Bongkar AC 2 PK</span>
+              <span>200.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang Bongkar AC 1/3 PK</span>
+              <span>350.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang Bongkar AC 1/2 PK</span>
+              <span>375.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang Bongkar AC 1 PK</span>
+              <span>400.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Pasang Bongkar AC 2 PK</span>
+              <span>425.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Penggantian Sparepart 1/3 PK</span>
+              <span>75.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Penggantian Sparepart 1/2 PK</span>
+              <span>75.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Penggantian Sparepart 1 PK</span>
+              <span>75.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Penggantian Sparepart 2 PK</span>
+              <span>75.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci Overhoul 1/3 PK</span>
+              <span>300.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci Overhoul 1/2 PK</span>
+              <span>300.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci Overhoul 1 PK</span>
+              <span>350.000 Rb</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span>Cuci Overhoul 2 PK</span>
+              <span>450.000 Rb</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="sticky-card">
+        <div class="card">
+          <div class="card-header text-center">
+            Pilih layanan untuk AC sejuk:
+          </div>
+          <ul class="list-group list-group-flush text-right">
+            <li class="list-group-item d-flex justify-content-between">
+              Jasa Cuci AC
+              <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="Jasa cuci ac.html"> >>klik
+                <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+              </a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              Jasa Tambah Freon
+              <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#"> >>klik
+                <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+              </a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              Jasa Pasang AC
+              <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#"> >>klik
+                <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+              </a>
+            </li>
+            <li class="list-group-item d-flex justify-content-between">
+              Jasa Perbaikan AC
+              <a class="icon-link icon-link-hover" style="--bs-link-hover-color-rgb: 25, 135, 84;" href="#"> >>klik
+                <svg class="bi" aria-hidden="true"><use xlink:href="#arrow-right"></use></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  function searchContent() {
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    const elements = document.querySelectorAll('.card-body, .list-group-item');
+    let firstMatch = null;
+
+    elements.forEach(element => {
+      element.classList.remove('highlight');
+      if (element.textContent.toLowerCase().includes(searchTerm)) {
+        element.classList.add('highlight');
+        if (!firstMatch) {
+          firstMatch = element;
+        }
+      }
+    });
+
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }
+
+  if (firstMatch) {
+    window.scrollTo({
+      top: firstMatch.offsetTop - 100,
+      behavior:"smooth"
+    });
+  }
+    
+</script>
+
+
+</body>
+</html>
