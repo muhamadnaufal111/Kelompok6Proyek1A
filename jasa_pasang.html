@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service AC</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <style>
+    body {
+      background: linear-gradient(180deg, #ffd700, #ff4500);
+    }
+    .form-check {
+      margin-top: 20px;
+    }
+    .estimate-section {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .estimate-section .btn {
+      margin-top: 20px;
+    }
+    img.rounded {
+      border-radius: 8px;
+    }
+    .h1 {
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    #confirmationMessage {
+      display: none; /* Menyembunyikan pesan konfirmasi secara default */
+      text-align: center; /* Memastikan pesan konfirmasi berada di tengah */
+      margin-top: 20px; /* Memberikan margin atas */
+      padding: 10px; /* Memberikan padding */
+      background-color: #fff; /* Warna latar belakang */
+    }
+    .judul{
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5 animate__animated animate__fadeIn">
+    <button type="button" class="btn btn-light mt-3 mb-3" onclick="window.location.href='home.php'">Home</button>
+    <h1 class="h1" style="color: rgb(255, 255, 255);">Layanan Jasa Pasang Bongkar Ac dan Penggantian Sparepart</h1>
+    <form id="identitasForm" action="succes.php" method="POST">
+      <input type="hidden" name="layanan" id="layananInput">
+      <input type="hidden" name="jumlah" id="jumlahInput">
+      <input type="hidden" name="total_harga" id="totalHargaInput">
+      <input type="hidden" name="tanggal_layanan" id="tanggalLayananInput">
+      <input type="hidden" name="waktu_layanan" id="waktuLayananInput">
+      
+      <!-- Service list items -->
+      <div class="list-group">
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Cuci AC 0.5 - 2 PK" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Pasang AC 1/3 - 1/2 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp200.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Cuci AC Inverter 0.5 - 2 PK" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Pasang AC 1 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp250.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Pengecekan AC" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Pasang AC 2 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp275.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Vacuum & Flushing AC" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Bongkar AC 1/3 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp175.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Flushing Evaporator" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Bongkar AC 1/2 - 1 - 2 PK</h5>
+              <p class="mb-1">Rp200.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Vacuum" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Pasang Bongkar Ac 1/3 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp300.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Cuci Besar (Overhaul)" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Pasang Bongkar Ac 1/2 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp375.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Cuci Besar (Overhaul)" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Pasang Bongkar Ac 1 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp400.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Cuci Besar (Overhaul)" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Pasang Bongkar Ac 2 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp425.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+        <div class="list-group-item d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center">
+            <img src="jasa_pasang_bongkar.jpeg" alt="Cuci Besar (Overhaul)" class="mr-3 rounded" style="width: 80px; height: 90px;">
+            <div>
+              <h5 class="mb-1">Penggantian Sparepart 1/3 - 1/2 - 1 - 2 PK</h5>
+              <small></small>
+              <p class="mb-1">Rp75.000</p>
+            </div>
+          </div>
+          <input type="number" class="form-control" style="width: 60px;" min="0" value="0">
+        </div>
+      </div>
+      <!-- Moved input fields to the bottom -->
+      <div class="card mt-5" style="border: 1px solid #ccc; padding: 15px;">
+        <h3 class="judul">Isi Identitas Anda</h3>
+        <div class="form-group mt-5">
+          <label for="nama" style="color:rgb(7, 8, 8)">Nama:</label>
+          <input type="text" class="form-control" name="nama" id="nama" required>
+        </div>
+        <div class="form-group">
+          <label for="notelepon" style="color:rgb(0, 0, 0)">No Telepon:</label>
+          <input type="tel" class="form-control" name="notelepon" id="notelepon" required>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label" style="color:rgb(0, 0, 0)">Alamat Lengkap Anda</label>
+          <textarea class="form-control" name="alamat" id="alamat" rows="3"></textarea>
+        </div>
+      </div>
+      
+      
+      <div class="card mt-5">
+        <div class="card-body">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="time">Pukul berapa Anda membutuhkan layanan? *</label>
+              <div class="input-group">
+                <input type="time" class="form-control" id='service_time' name="waktu_layanan" value="08:00">
+              </div>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="date">Kapan Anda membutuhkan layanan? *</label>
+              <div class="input-group date" id="datepicker">
+                <input type="text" class="form-control" placeholder="Pilih Tanggal" name='tanggal_layanan' readonly>
+                <div class="input-group-append">
+                  <span class="input-group-text bg-white">
+                    <i class="fa fa-calendar"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="form-check estimate-section" style="color: rgb(255, 255, 255);">
+        <div class="estimate-price">
+          <h5>Estimasi Harga</h5>
+          <p id="estimated-price" name='total_price' style="font-size: 2em;">Rp0</p>
+        </div>
+        <a href="javascript:void(0);" onclick="setSessionData()" class="btn btn-primary">Konfirmasi Pesanan</a>
+        <div id="confirmationMessage" class="estimate-section" style="display: none;">
+          <p>Konfirmasi pesanan Anda telah berhasil.</p>
+          <p>Terima kasih, pesanan Anda akan segera diproses.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#datepicker').datepicker({
+        format: 'yyyy-mm-dd',
+        startDate: '0d',
+        todayHighlight: true,
+        autoclose: true
+      });
+
+      // Calculate and update estimated price
+      $('input[type="number"]').on('input', function() {
+        let totalPrice = 0;
+        $('.list-group-item').each(function() {
+          const price = parseInt($(this).find('p.mb-1').text().replace('Rp', '').replace('.', ''));
+          const quantity = parseInt($(this).find('input[type="number"]').val());
+          if (!isNaN(price) && !isNaN(quantity)) {
+            totalPrice += price * quantity;
+          }
+        });
+        $('#estimated-price').text('Rp' + totalPrice.toLocaleString('id-ID'));
+      });
+    });
+
+    function setSessionData() {
+      console.log("setSessionData() dipanggil");
+      const services = [];
+      const quantities = [];
+      $('.list-group-item').each(function () {
+        const service = $(this).find('h5.mb-1').text();
+        const quantity = parseInt($(this).find('input[type="number"]').val());
+        if (!isNaN(quantity) && quantity > 0) {
+          services.push(service);
+          quantities.push(quantity);
+        }
+      });
+
+      const total_price = parseInt($('#estimated-price').text().replace('Rp', '').replace('.', '').replace(',', ''));
+      const service_date = $('#datepicker').find('input').val();
+      const service_time = $('#service_time').val();
+
+      // Set nilai input hidden pada formulir identitas
+      $('#layananInput').val(services.join(', '));
+      $('#jumlahInput').val(quantities.join(', '));
+      $('#totalHargaInput').val(total_price);
+      $('#tanggalLayananInput').val(service_date);
+      $('#waktuLayananInput').val(service_time);
+
+      // Kirim formulir identitas
+      $('#identitasForm').submit();
+
+      $('#confirmationMessage').show();
+    }
+  </script>
+</body>
+</html>
